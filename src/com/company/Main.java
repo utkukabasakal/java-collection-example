@@ -1,8 +1,5 @@
 package com.company;
-import  java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
+import java.util.*;
 
 public class Main {
 
@@ -31,41 +28,13 @@ public class Main {
     System.out.println("--------------");
     //
     //
-    ArrayList <String> sehirler = new ArrayList<String>();
-        sehirler.add("Sivas");
-        sehirler.add("Ankara");
-        sehirler.add("İzmir");
-        sehirler.add("İstanbul");
-    for (String sehir:sehirler){
-        System.out.println(sehir);
-    }
-    System.out.println("--------------");
-    //
-    //
-    sehirler.remove(0);
-    Collections.sort(sehirler);
-    System.out.println(sehirler);
-    //
-    //
+
     ArrayList<Customer> customers = new ArrayList<Customer>();
     customers.add(new Customer(1, "Ali","Yıldız"));
     customers.add(new Customer(2, "Veli","Yılmaz"));
     customers.add(new Customer(3,"Ayse", "Koc"));
     for(Customer customer:customers){
-        System.out.println(customer.number +" "+customer.firstName+" "+customer.lastName);
+        System.out.println(customer.getNumber()+" "+customer.getFirstName()+" "+customer.getLastName());
     }
-    System.out.println("--------------");
-    //
-    //
-        HashMap <String , String> sozluk = new HashMap<String, String>();
-        sozluk.put("car","araba");
-        sozluk.put("home", "ev");
-        sozluk.put("computer", "bilgisayar");
-        System.out.println(sozluk);
-        System.out.println("--------------");
-    //
-    //
-        for(String item: sozluk.keySet())
-        System.out.println(item);
     }
 }
